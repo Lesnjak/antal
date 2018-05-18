@@ -28,7 +28,6 @@ jQuery(document).ready(function( $ ) {
         }
     });
     $('.catalog-button').click(function () {
-        $(this).toggleClass('hover-effect');
         $(".open-catalog .open-catalog-parent").slideToggle({
             duration: 'slow'
 

@@ -296,3 +296,12 @@ $color-button-hover: #f00;
   top: 22px;
 }
 
+
+@media (max-width: 480px) {
+  h3 {
+    line-height: 60px;
+  }
+  section {
+    padding: 40px 0;
+  }
+}

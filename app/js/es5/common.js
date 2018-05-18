@@ -1,6 +1,12 @@
 (function () {
     'use strict';
-
+    $('.mouse').click( function(){ // ловим клик по ссылке с классом go_to
+        var scroll_el = $(this).attr('data-to'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
+        }
+        return false; // выключаем стандартное действие
+    });
     jQuery(document).ready(function ($) {
 
         $("#menu").mmenu({
@@ -22,11 +28,9 @@
                 $(".header1").removeClass("show-menu");
             }
         });
-        $('.catalog-button').click(function () {
-            $(this).toggleClass('hover-effect');
-            $(".open-catalog .open-catalog-parent").slideToggle({
+        $('#nav-icon2').click(function () {
+            $(".mobile").slideToggle({
                 duration: 'slow'
-
             });
         });
         $('.add').click(function () {

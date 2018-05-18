@@ -1,0 +1,12 @@
+.service-main .title-box {
+  max-width: 750px;
+}
+
+.service-main .title-box h1 {
+  font-size: 60px;
+}
+
+.service-main .title-box p {
+  font-size: 18px;
+  line-height: 27px;
+}

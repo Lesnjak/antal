@@ -19,6 +19,7 @@
       .scroll-container{
         height: 185px;
         overflow: auto;
+        margin-top: 5px;
         .scroll-text{
           width: 95%;
           overflow: hidden;
@@ -27,6 +28,7 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
+
         }
       }
     }
