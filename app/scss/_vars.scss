@@ -61,6 +61,14 @@ h3{
   font-weight: 700;
   text-transform: uppercase;
   line-height:60px;
+  text-align: center;
+}
+h4{
+  color: #ffffff;
+  font-family: Roboto-Condensed;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 p{
   font-family: Robot-light;
@@ -299,8 +307,15 @@ $color-button-hover: #f00;
 
 @media (max-width: 480px) {
   h3 {
-    line-height: 60px;
+    line-height: 45px;
+    font-size: 40px;
   }
+  h4 {
+    line-height: 45px;
+    font-size: 40px;
+  }
+
+
   section {
     padding: 40px 0;
   }
