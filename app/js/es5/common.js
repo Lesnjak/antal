@@ -1,12 +1,6 @@
 (function () {
     'use strict';
-    $('.mouse').click( function(){ // ловим клик по ссылке с классом go_to
-        var scroll_el = $(this).attr('data-to'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
-        if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); // анимируем скроолинг к элементу scroll_el
-        }
-        return false; // выключаем стандартное действие
-    });
+
     jQuery(document).ready(function ($) {
 
         $("#menu").mmenu({
@@ -28,9 +22,10 @@
                 $(".header1").removeClass("show-menu");
             }
         });
-        $('#nav-icon2').click(function () {
-            $(".mobile").slideToggle({
+        $('.catalog-button').click(function () {
+            $(".open-catalog .open-catalog-parent").slideToggle({
                 duration: 'slow'
+
             });
         });
         $('.add').click(function () {
@@ -138,6 +133,23 @@
             });
         });
         /////////////////////video-block///////////////
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 5, // 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            centerMode: true,
+            focusOnSelect: true,
+            loop: true
+
+        });
         $('.slider-second').slick({
             infinite: true,
             slidesToShow: 1,

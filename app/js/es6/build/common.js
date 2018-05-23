@@ -150,6 +150,23 @@ $('.form-sec').removeClass("formShow");
         });
     });
     /////////////////////video-block///////////////
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 5, // 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        loop:true
+
+    });
     $('.slider-second').slick({
         infinite: true,
         slidesToShow: 1,
